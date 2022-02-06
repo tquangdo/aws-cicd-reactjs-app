@@ -72,3 +72,5 @@ yarn install && yarn watch
 ### 4) result
 - `dtq-bucket-reactjs` > `index.html` > click `Object URL`
 ![end](screenshots/end.png)
+### 5) delete AWS resources
+`./del_aws_resource.sh`
