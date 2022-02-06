@@ -41,5 +41,34 @@ yarn install && yarn watch
 ![local](screenshots/local.png)
 
 ## AWS
-### 1) CodePipeline
+### 1) S3
+- create name=`dtq-bucket-reactjs`
+- block=`OFF`
+- bucket policy:
+```json
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "Statement1",
+			"Principal": "*",
+			"Effect": "Allow",
+			"Action": "s3:GetObject",
+			"Resource": "arn:aws:s3:::dtq-bucket-reactjs/*"
+		}
+	]
+}
+```
+### 2) CodeBuild
+- create name=`DTQCodeBuildReactJS`
+![pl_build](screenshots/pl_build.png)
+### 3) CodePipeline
 - create name=`DTQPipelineReactJS`
+- src stage:
+![pl_src](screenshots/pl_src.png)
+- build stage: create `DTQCodeBuildReactJS`
+- deploy stage:
+![pl_dp](screenshots/pl_dp.png)
+### 4) result
+- `dtq-bucket-reactjs` > `index.html` > click `Object URL`
+![end](screenshots/end.png)
