@@ -63,6 +63,7 @@ yarn install && yarn watch
 - create name=`DTQCodeBuildReactJS`
 ![pl_build](screenshots/pl_build.png)
 ### 3) CodePipeline
+[cicd](https://docs.google.com/spreadsheets/d/1m8LuBQUzqIQ0bJYb3NJZOT4iSb78xUEG/edit#gid=1878281573&range=B5)
 - create name=`DTQPipelineReactJS`
 - src stage:
 ![pl_src](screenshots/pl_src.png)
